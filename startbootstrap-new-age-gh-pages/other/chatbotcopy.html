@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="https://rawgit.com/space10-community/conversational-form/master/dist/conversational-form.min.js"
+            crossorigin></script>
+    <script>
+        new cf.ConversationalForm({
+            // HTMLFormElement
+            formEl: HTMLFormElement,
+            robotImage: "../static/zirus-01.png",
+        });
+        window.ConversationalForm.getFormData(serialized);
+        window.alert(serialized);
+    </script>
+
+
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<form cf-form-element action="">
+    <!-- Start changing from here -->
+    <input type="text" cf-questions="Hey! What is your name?||Hello! Please tell me your name." id="name"/> <!-- This is how a question is formed -->
+    <input cf-questions="Hey {name}, I'm going to help you find someone suitable to sit next to! What is you booking confirmation number?" type="range"> 
+    <input cf-questions="Let's get started! I'm going to ask you 10 questions. Rate them from 1 (dislike/diagree) to 10 (like/agree).">
+    <input cf-questions="Yay, first question! You would prefer to sleep most of the trip" type="range">
+    <input cf-questions="You would spend most of you time on phone-games, web surfing or work on laptop" type="range">
+    <input cf-questions="You are likely to talk to the person beside you" type="range">
+    <input cf-questions="You are comfortable around children" type="range">
+    <input cf-questions="You are an outgoing person" type="range">
+    <input cf-questions="You are energetic" type="range">
+    <input cf-questions="You consider your trip to be an excellent networking opportunity" type="range">
+    <input cf-questions="You are interested in topics of science and technology" type="range">
+    <input cf-questions="You are interested in topics of performing or visual arts" type="range">
+    <input cf-questions="How much do you prefer conversations to be light and fun?" type="range">
+    <input cf-questions="You are personal when you talk" type="range">
+    <input cf-questions="Silliness and laughing make your travel time better?" type="range">
+    <input cf-questions="Thank you for letting me help you find a seatmate! Your information has been sent to the respective traveline! Fingers crossed for meaningful conversations or a loooooong nap! See ya next time!"
+    <!-- Don't change beyond here -->
+</form>
+</body>
+</html>

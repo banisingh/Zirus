@@ -1,0 +1,84 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+            integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="https://rawgit.com/space10-community/conversational-form/master/dist/conversational-form.min.js"
+            crossorigin></script>
+    <script>
+        var cfInstance = cf.startTheConversation({
+            formEl: document.getElementById("conversationform"),
+            robotImage: '../static/zirus-01.png',
+        });
+      /*  $(document).ready(function () {
+            $("#submit-form").click(function () {
+                $.post("/processing", $("#conversationform").serialize());
+            });
+        });*/
+    </script>
+
+
+</head>
+<body>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<form cf-form-element id="conversationform" action="/processing" method="post">
+    {% csrf_token %}
+    <!-- Start changing from here --> <!-- Validate input -->
+    <input type="text" cf-questions="Hey! What is your name?||Hello! Please tell me your name." id="name"/>
+    <!-- This is how a question is formed -->
+    <input cf-questions="Hey {name}, what is you booking confirmation number?" type="range" id="confirmation">
+    <input cf-questions="Let's get started! I'm going to ask you a few questions and would love it if you could rate them on a scale from 1 - 10, where 10 is positive (yes, I like, agree), and 1 is negative (no, I disagree, I don't like). Ok?">
+    <input cf-questions="Yay, first question! How likely are you to talk to the person beside you?" type="range"
+           id="talkative">
+    <!--
+    <input cf-questions="How much do you like to initiate conversations?" type="range" id="intiative">
+    <input type="text" cf-questions="Hey! What is your name?||Hello! Please tell me your name." id="name"/>
+    <input cf-questions="Hey {name}, what is you booking confirmation number?" type="range">
+    <input cf-questions="Let's get started! I'm going to ask you a few questions and would love it if you could rate them on a scale from 1 - 10, where 10 is positive (yes, I like, agree), and 1 is negative (no, I disagree, I don't like). Ok?>
+    <input cf-questions="Yay, first question! How much of your time do you want to spend sleeping?" type="range">
+    <input cf-questions="How much of your time will be spent on phone-games, web surfing or work on laptop?" type="range">
+    <input cf-questions="How likely are you to talk to the person beside you?" type="range">
+    <input cf-questions="How much do you like to initiate conversations?" type="range">
+    <input cf-questions="How energetic are you?" type="range">
+    <input cf-questions="Does topics in science and technology interest you?" type="range">
+    <input cf-questions="Does topics in performing or visual arts interest you?" type="range">
+    <input cf-questions="How much do you prefer conversations to be light and fun?" type="range">
+    <input cf-questions="Do you mostly rely on experience when you talk to other people?" type="range">
+    <input cf-questions="Do you generally rely on facts and information when you talk to other people?" type="range">
+    <input cf-questions="Does silliness and laughing make your travel time better?" type="range">
+    <!-- Don't change beyond here -->
+    <fieldset style="display: none;">
+        <label for="thats-all">Are you ready to submit the form?</label>
+        <select cf-questions="Are you ready to submit the form?" name="submit-form" id="submit-form"
+                class="form-control">
+            <option></option>
+            <option>Yup</option>
+        </select>
+    </fieldset>
+</form>
+</body>
+</html>

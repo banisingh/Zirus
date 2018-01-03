@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="BotPreview - built with botpreview.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zirus/title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+        }
+        div.vcenter {
+            margin: 5vh auto 0;
+            height: 95vh;
+            width: 100%;
+            text-align: center;
+        }
+        div.iphone-wrapper {
+            display: inline-block;
+            width: auto;
+            height: 100%;
+            position: relative;
+        }
+        div.iphone-wrapper > img {
+            height: 100%;
+            width: auto;
+            display: block;
+        }
+        div.screen-content {
+            position: absolute;
+            top: 10.8985%;
+            bottom: 20%;
+            left: 14.65%;
+            right: 16.8%;
+            background: #000;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/digitalbreed/jquery.fbmessenger/v0.0.9/dist/jquery.fbmessenger.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/digitalbreed/jquery.fbmessenger/v0.0.9/dist/jquery.fbmessenger.css">
+</head>
+<body>
+<div class="vcenter">
+    <div class="iphone-wrapper">
+        <img alt="iPhone" src="https://botpreview.com/assets/images/iphone6s-white.png" />
+        <div class="screen-content">
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function() {
+        var now = new Date();
+        $('.screen-content').fbMessenger({
+            botName: 'Zirus',
+            botBannerUrl: '',
+            botLogoUrl: 'https://imgur.com/a/CooU6',
+            botWelcomeMessage: 'Hey there! I\'m so glad you want to know about our product! Click get started to know more!',
+            likes: {
+                totalCount: 12345,
+                friendName: 'John Doe',
+                otherFriendsCount: 42
+            },
+            leftUser: 'left',
+            rightUser: 'right',
+            timeScale: 1,
+            locale: 'en',
+            displayedCarrier: 'o2-de',
+            persistentMenu: [{"label":"","children":[{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]}]},{"label":"","children":[{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]}]},{"label":"","children":[{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]},{"label":"","children":[{"label":""},{"label":""},{"label":""},{"label":""},{"label":""}]}]}]
+        })
+        .fbMessenger('start', { delay: 6000, timestamp: now } )
+.fbMessenger('message', 'right', 'Get Started', { delay: 4000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 3000, timestamp: now } )
+.fbMessenger('showButtonTemplate', 'What would you like to know about today?', ['How does you AI work?', 'Why would I or my company use this?'], { delay: 4000, timestamp: now } )
+.fbMessenger('message', 'right', 'AI', { delay: 1000, timestamp: now } )
+.fbMessenger('message', 'left', 'Wow, thank you for showing interest! Zirus takes the input we get from our users when they take our survey, turn this into a 11-dimensional graph and use Euclidian distance to measure how people should be matched. Based on review and usage, Zirus then becomes better at understanding and optimizing input thanks to AI!', { delay: 9999, timestamp: now } )
+.fbMessenger('message', 'right', 'Question', { delay: 5000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 2000, timestamp: now } )
+.fbMessenger('showButtonTemplate', 'What more would you like to know about today?', ['Why should I or my company use this?', 'Want to get in touch?'], { delay: 6000, timestamp: now } )
+.fbMessenger('message', 'right', 'Why should I use this?', { delay: 1000, timestamp: now } )
+.fbMessenger('message', 'left', 'I\'m glad you asked, comrade! Here\'s my story: I\'m a frequent traveller, but I\'m also quite broke. In short: You\'ll find me in the economy class. Travelling is always really awkward. I\'m usually very chatty and for some reason I always sit beside people who are not. Damn randomness.\u00A0', { delay: 9000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 2000, timestamp: now } )
+.fbMessenger('message', 'left', 'However, since I started using Zirus I\'ve met chatty programmers like myself - created new networks, and experienced travelling in a plane where people are actually talking to each other. It\'s amazing and it\'s incredibly how a trip suddenly nurtures connections.', { delay: 9000, timestamp: now } )
+.fbMessenger('message', 'right', 'But I don\'t like talking and I want to sleep!', { delay: 1000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 2000, timestamp: now } )
+.fbMessenger('message', 'left', 'No worries! This app is at your service - you will be matched with other people that wants to sleep and rather not talk. You will have the great experience of enjoying each other silence. You no longer have to calculate wether or not the person beside you wants to talk or not. No calculus and non-linear algebra needed!', { delay: 9000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 2000, timestamp: now } )
+.fbMessenger('message', 'right', 'Really? Oh, then I want to try it out!', { delay: 9000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 2000, timestamp: now } )
+.fbMessenger('message', 'left', 'AMAZING! Let\'s get you started!', { delay: 9000, timestamp: now } )
+.fbMessenger('typingIndicator', { delay: 500, timestamp: now } )
+
+        .fbMessenger('run');
+
+        $('div.iphone-wrapper > img').load(function() {
+            $(window).trigger('resize');
+        });
+    });
+</script>
+</body>
+</html>
